@@ -1,5 +1,6 @@
 const content = [
-  "Welcome to Joe's Site",
+  "<p>Welcome to Joe's Site</p>" +
+  "<img src='images/jcostanzo.jpg' alt='Joe Costanzo web developer' />",
   "I have offered web design & development services since 2014. " +
   "Some of my experiences are listed below.\n" +
   "\n" +
