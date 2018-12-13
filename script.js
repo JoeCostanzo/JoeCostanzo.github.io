@@ -28,7 +28,10 @@ const content = [
     "<li>My AI - Machine learning app</li>" +
     "<li>Picture Sharing App</li>" +
   "</ul>",
-  "You may contact me at: jcostanzo1@gmail.com"
+  "You may contact or find me at:" +
+  "<ul><li><a href='mailto:jcostanzo1@gmail.com'>jcostanzo1@gmail.com</a></li>" +
+  "<li><a href='https://www.linkedin.com/in/joecostanzo/'>LinkedIn Page</a></li>" +
+  "<li><a href='https://www.facebook.com/joe.costanzo'>Facebook Page</a></li></ul>"
 ];
 $(document).ready(function () {
 
