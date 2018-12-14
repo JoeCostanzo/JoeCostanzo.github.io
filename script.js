@@ -1,39 +1,46 @@
 const content = [
-  "<p>Welcome to Joe's Site</p>" +
-  "<img class='splashimg' src='https://github.com/JoeCostanzo/JoeCostanzo.github.io/blob/master/images/jcostanzo.jpg?raw=true' alt='Joe Costanzo web developer' />",
-  "I have offered web design & development services since 2014. " +
-  "Some of my experiences are listed below.\n" +
-  "\n" +
-    "<h5>Clients:</h5>" +
-  "<ul>" +
-    "<li><a href='http://www.superiorpowdercoatingllc.com'>Superior Powder Coating, LLC</a></li>" +
-    "<li>MVP Innovations, Inc</li>" +
-    "<li>TrivNow, LLC</li>" +
-    "<li>Apex Systems, Inc (worked for AT&T)</li>" +
-    "<li>Rentpath, LLC</li>" +
-  "</ul>" +
-  "<h5>Web app:</h5>" +
-  "<ul>" +
-    "<li><a href='http://third-fire-595.appspot.com/'>Palintip: Palindrome tip calculator</a></li>" +
-  "</ul>" +
-  "<h5>Stand-alone apps:</h5>" +
-  "<ul>" +
-    "<li><a href='https://play.google.com/store/apps/details?id=info.joeco.randomnumberutils&hl=pt'>Random Number Utilities</a></li>" +
-    "<li><a href='https://joeco.itch.io/exosystem'>ExoSystem</a></li>" +
-  "</ul>" +
-  "<h5>Other prototypes:</h5>" +
-  "<ul>" +
-    "<li><a href='https://www.npmjs.com/package/reifycli'>Reify CLI - NPM Package</a></li>" +
-    "<li><a href='https://www.npmjs.com/package/periodic-ping'>Periodic Ping - NPM Package</a></li>" +
-    "<li>My AI - Machine learning app</li>" +
-    "<li>Picture Sharing App</li>" +
-  "</ul>",
-  "You may contact or find me at:" +
-  "<ul><li><a href='mailto:jcostanzo1@gmail.com'>jcostanzo1@gmail.com</a></li>" +
-  "<li><a href='https://www.linkedin.com/in/joecostanzo/'>LinkedIn Page</a></li>" +
-  "<li><a href='https://www.facebook.com/joe.costanzo'>Facebook Page</a></li></ul>"
+  `<p>Welcome to Joe's Site</p>
+  <img class='splashimg' src='https://github.com/JoeCostanzo/JoeCostanzo.github.io/blob/master/images/jcostanzo.jpg?raw=true' alt='Joe Costanzo web developer' />`,
+  `<div class="aboutcontent">
+    <p>I have offered web design & development services since 2014.
+    Some of my experiences are listed below.</p>
+    <h5>Clients:</h5>
+    <ul>
+      <li><a target="_blank" href='http://www.superiorpowdercoatingllc.com'>Superior Powder Coating, LLC</a></li>
+      <li>MVP Innovations, Inc</li>
+      <li>TrivNow, LLC</li>
+      <li>Apex Systems, Inc (worked for AT&T)</li>
+      <li>Rentpath, LLC</li>
+    </ul>
+    <h5>Web app:</h5>
+    <ul>
+      <li><a target="_blank" href='http://third-fire-595.appspot.com/'>Palintip: Palindrome tip calculator</a></li>
+    </ul>
+    <h5>Stand-alone apps:</h5>
+    <ul>
+      <li><a target="_blank" href='https://play.google.com/store/apps/details?id=info.joeco.randomnumberutils&hl=pt'>Random Number Utilities</a></li>
+      <li><a target="_blank" href='https://joeco.itch.io/exosystem'>ExoSystem</a></li>
+    </ul>
+    <h5>Other prototypes:</h5>
+    <ul>
+      <li><a target="_blank" href='https://www.npmjs.com/package/reifycli'>Reify CLI - NPM Package</a></li>
+      <li><a target="_blank" href='https://www.npmjs.com/package/periodic-ping'>Periodic Ping - NPM Package</a></li>
+      <li>My AI - Machine learning app</li>
+      <li>Picture Sharing App</li>
+    </ul>
+  </div>`,
+  `<p>You may contact or find me at:</p>
+  <ul>
+    <li><a target="_blank" href='mailto:jcostanzo1@gmail.com'>jcostanzo1@gmail.com</a></li>
+    <li><a target="_blank" href='https://www.linkedin.com/in/joecostanzo/'>LinkedIn Page</a></li>
+    <li><a target="_blank" href='https://www.facebook.com/joe.costanzo'>Facebook Page</a></li>
+  </ul>`
 ];
 $(document).ready(function () {
+
+  $(document).click(function () {
+    incrementCount(1);
+  });
 
   // Catch pagination clicks
   $('#pagination').on('click', 'a.pagelink', function(e) {
@@ -58,7 +65,6 @@ $(document).ready(function () {
 
     // Change Content
     jumpPage(clickedLink);
-
   });
 
 });
@@ -138,3 +144,7 @@ function changePage(currPage) {
   $('#pageLi').attr('data-page', currPage);
 
 }
+
+// setTimeout(function () {
+//   jumpPage("about");
+// }, 50);
