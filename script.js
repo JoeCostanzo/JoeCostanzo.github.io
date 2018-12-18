@@ -38,9 +38,9 @@ const content = [
 ];
 $(document).ready(function () {
 
-  $(document).click(function () {
-    incrementCount(1);
-  });
+  // $(document).click(function () {
+  //   incrementCount(1);
+  // });
 
   // Catch pagination clicks
   $('#pagination').on('click', 'a.pagelink', function(e) {
