@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="counter.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Joe Costanzo, III's Site.</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
-  <!--<body onload="incrementCount(1)">-->
   <body>
     <div class="container">
       <nav>
@@ -20,26 +18,18 @@
           <li><h2><a class="navlink contact" href="#" title="Goto Contact Page" data-linkto="contact">Contact</a></h2></li>
         </ul>
       </nav>
-      <!--<div class="counter_container" id="id_counter_container">-->
-        <!--<div class="container_inner" id="display_div_id">-->
-        <!--</div>-->
-      <!--</div>-->
       <div id="contentDiv">
         <p>Welcome to Joe's Site</p>
         <img class="splashimg" src='http://github.com/JoeCostanzo/JoeCostanzo.github.io/blob/master/images/jcostanzo.jpg?raw=true' alt='Joe Costanzo web developer' />
       </div>
       <ul id="pagination">
-        <li class="prev"><a class="pagelink prevlink disabledlink" href="#" title="Show Previous Page" data-linktype="prev">Previous Page</a>
-
-        </li>
+        <li class="prev"><a class="pagelink prevlink disabledlink" href="#" title="Show Previous Page" data-linktype="prev">Previous Page</a></li>
         <li id="pageLi" data-page="1">-- Page 1 --</li>
-        <li class="next"><a class="pagelink nextlink" href="#" title="Show Next Page" data-linktype="next">Next Page</a>
-
-        </li>
+        <li class="next"><a class="pagelink nextlink" href="#" title="Show Next Page" data-linktype="next">Next Page</a></li>
       </ul>
     </div>
+    <footer>
+      <script src="script.js"></script>
+    </footer>
   </body>
-  <footer>
-    <script src="script.js"></script>
-  </footer>
 </html>
