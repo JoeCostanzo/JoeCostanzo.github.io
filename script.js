@@ -38,9 +38,8 @@ const content = [
 ];
 $(document).ready(function () {
 
-  // $(document).click(function () {
-  //   incrementCount(1);
-  // });
+  let body = document.querySelector('body');
+  let navlinks = document.querySelector('#navigation li a');
 
   // Catch pagination clicks
   $('#pagination').on('click', 'a.pagelink', function(e) {
@@ -67,7 +66,33 @@ $(document).ready(function () {
     jumpPage(clickedLink);
   });
 
+  $('#red').click(function () {
+    body.style.backgroundColor = 'indianred';
+    modifyClasses(['navclass0','navclass2','navclass3'], 'navclass1');
+  });
+
+  $('#green').click(function () {
+    body.style.backgroundColor = 'lightgreen';
+    modifyClasses(['navclass0','navclass1','navclass3'], 'navclass2');
+  });
+
+  $('#blue').click(function () {
+    body.style.backgroundColor = 'aliceblue';
+    modifyClasses(['navclass0','navclass1','navclass2'], 'navclass3');
+  });
+
+  $('#x').click(function () {
+    body.style.backgroundColor = '#EEE';
+    modifyClasses(['navclass1','navclass2','navclass3'], 'navclass0');
+  });
 });
+
+function modifyClasses(array, single) {
+  array.map(function (classname) {
+    $('#navigation').removeClass(classname);
+  });
+  $('#navigation').addClass(single);
+}
 
 function adjustPageLinks(currPage) {
   $('.prevlink').removeClass('disabledlink');
@@ -139,6 +164,7 @@ function jumpPage(clickedLink) {
 
 function changePage(currPage) {
   // Update our DOM elements
+  $('.greet').html('');
   $('#contentDiv').html(content[currPage - 1]);
   $('#pageLi').html('-- Page ' + currPage + ' --');
   $('#pageLi').attr('data-page', currPage);

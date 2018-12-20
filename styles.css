@@ -2,6 +2,10 @@ body {
   background-color: #EEE;
   font-family: Helvetica, Arial, sans-serif;
 }
+.greet {
+  float: right;
+  margin: 10px;
+}
 .splashimg {
   width: 55vw;
   max-width: 350px;
@@ -32,18 +36,80 @@ a:hover {
 a {
   text-decoration: none;
 }
+.btn-picker {
+  -moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+  -webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+  background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+  background-color:#7892c2;
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+  border-radius:7px;
+  border:1px solid #4e6096;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:19px;
+  padding:6px 21px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+}
+.btn-picker:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+  background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+  background-color:#476e9e;
+}
+.btn-picker:active {
+  position:relative;
+  top:1px;
+}
+
 #pageLi {
   display: inline;
 }
+.navclass0 li a {
+  color: red;
+}
+.navclass1 li a {
+  color: #7e1e26;
+}
+.navclass2 li a {
+  color: #257d2e;
+}
+.navclass3 li a {
+  color: #3f60bf;
+}
 #navigation li a {
   float: left;
-  color: red;
   margin: 10px;
   padding: 3px;
 }
+.navclass0 .selected {
+  border-left: 6px solid red;
+}
+.navclass1 .selected {
+  border-left: 6px solid #7e1e26;
+}
+.navclass2 .selected {
+  border-left: 6px solid #257d2e;
+}
+.navclass3 .selected {
+  border-left: 6px solid #3f60bf;
+}
 .selected {
   font-style: italic;
-  border-left: 6px solid red;
   background-color: lightgrey;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

@@ -8,20 +8,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <title>Joe Costanzo, III's Site.</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script>
+      function greet() {
+        let name = document.querySelector('#name').value;
+        alert(`Hello, ${name}!`);
+      }
+    </script>
   </head>
   <body>
     <div class="container">
       <nav>
-        <ul id="navigation">
+        <ul id="navigation" class="navclass0">
           <li><h2><a class="navlink home selected" href="#" title="Goto Home Page" data-linkto="home">Home</a></h2></li>
           <li><h2><a class="navlink about" href="#" title="Goto About Page" data-linkto="about">About</a></h2></li>
           <li><h2><a class="navlink contact" href="#" title="Goto Contact Page" data-linkto="contact">Contact</a></h2></li>
         </ul>
       </nav>
+      <form class="greet" onsubmit="greet(); return false;">
+        <input id="name" placeholder="Type name here" type="text" required><input type="submit" value="Get Greeting">
+      </form>
       <div id="contentDiv">
         <p>Welcome to Joe's Site</p>
         <img class="splashimg" src='http://github.com/JoeCostanzo/JoeCostanzo.github.io/blob/master/images/jcostanzo.jpg?raw=true' alt='Joe Costanzo web developer' />
       </div>
+      <button class="btn-picker" id="red">R</button>
+      <button class="btn-picker" id="green">G</button>
+      <button class="btn-picker" id="blue">B</button>
+      <button class="btn-picker" id="x">X</button>
       <ul id="pagination">
         <li class="prev"><a class="pagelink prevlink disabledlink" href="#" title="Show Previous Page" data-linktype="prev">Previous Page</a></li>
         <li id="pageLi" data-page="1">-- Page 1 --</li>
